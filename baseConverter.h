@@ -1,1 +1,1 @@
-char* decimalToBin(double);
+void decimalToBin(double);

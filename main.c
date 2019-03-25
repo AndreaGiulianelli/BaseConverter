@@ -2,7 +2,15 @@
 #include <stdio.h>
 #include "baseConverter.h"
 
-void main()
+void main(int argc,char** argv)
 {
-    printf("\n\n%s",decimalToBin(10.25));
+    if(argc != 2)
+    {
+        printf("Impossibile eseguire.. Passare un numero valido di parametri\n");
+        exit(1);
+    }
+
+    double n=atof(argv[1]);
+    printf("Conversione %lf...\n",n);
+    decimalToBin(n);
 }

@@ -37,9 +37,9 @@ void decimalToBin(double n)
             }
         }
         
-        printf("\n%lf --> %d",resto,expo);
+        //printf("\n%lf --> %d",resto,expo);
         resto -= pow(2,expo);
-        printf("\n%lf",resto);
+        //printf("\n%lf",resto);
 
         if(expo < 0 && precExp > 0)
         {

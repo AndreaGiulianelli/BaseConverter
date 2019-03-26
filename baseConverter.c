@@ -30,11 +30,16 @@ void decimalToBin(double n)
             while(pow(2,i)>resto)
                 i--;
             expo = i;
+            //Non rappresento numeri con una precisione maggiore di 2^(-15)
+            if(expo < -15)
+            {
+                break;
+            }
         }
         
-        //printf("\n%lf --> %d",resto,expo);
+        printf("\n%lf --> %d",resto,expo);
         resto -= pow(2,expo);
-        //printf("\n%lf",resto);
+        printf("\n%lf",resto);
 
         if(expo < 0 && precExp > 0)
         {
